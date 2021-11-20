@@ -6,6 +6,9 @@ public class Node : MonoBehaviour
 {
     public List<Node> availableNodes;
 
+    public bool isIntersection = false;
+    public string intersectionType = "";
+
     // Start is called before the first frame update
     void Start()
     {

@@ -6,11 +6,13 @@ public class CarAgent : MonoBehaviour
 {
 
     private CarState currentState;
-
     public Node currentNode;
     private Vector3 currentNodePos;
 
     public float speed = 15.0f;
+    private float time = 0.0f;
+
+    public string agentName = "";
 
     public enum CarState
     {
@@ -49,11 +51,12 @@ public class CarAgent : MonoBehaviour
         currentNodePos = currentNode.GetNodePosition(this.transform.position.y);
 
         if(Vector3.Distance(this.transform.position, currentNodePos) < 0.1f){
+            // Verifica si es intersección
+            VerifyIntersection();
+            //Si si es intersección 
             currentNode = currentNode.GetRandomNode();
-
         }else{
             MoveToNode();
-            print("Moving to node");
         }
 
     }
@@ -64,13 +67,21 @@ public class CarAgent : MonoBehaviour
     }
 
     private void FaceToDestination(){
-        // Vector3 direction = currentNode.transform.position - transform.position;
-        // Quaternion lookRotation = Quaternion.LookRotation(direction);
-
-        // float step = speed * Time.deltaTime;
-        // this.transform.LookAt(currentNode.transform);
-        // transform.LookAt(Vector3(this.transform.position.x, currentNode.transform.position.y, this.transform.position.z));
-        transform.LookAt(new Vector3(currentNode.transform.position.x, transform.position.y, currentNode.transform.position.z));
+        transform.LookAt(new Vector3(currentNode.transform.position.x, this.transform.position.y, currentNode.transform.position.z));
     }
+
+    private void VerifyIntersection(){
+        if(currentNode.isIntersection){
+            if(currentNode.intersectionType == "Start"){
+                time = Time.time;
+            }else if(currentNode.intersectionType == "End"){
+                float endTime = Time.time - time;
+                print("End time of " + agentName + " : " + endTime);
+
+            }
+
+        }
+    }
+
 
 }
