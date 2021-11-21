@@ -19,6 +19,7 @@ public class CarAgent : MonoBehaviour
         driving,
         stopped
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,17 +41,30 @@ public class CarAgent : MonoBehaviour
         currentState = CarState.stopped;
     }
 
-    private void MoveAgent(){
-        if (currentState == CarState.stopped) return;
+    private void ReactivateAgent(){
+        CheckTrafficLight();
+        
+    }
 
-        CalculateMovement();
-        FaceToDestination();
+    private void MoveAgent(){
+        if (currentState == CarState.driving){
+            CalculateMovement();
+            FaceToDestination();
+        }else if (currentState == CarState.stopped){
+            ReactivateAgent();
+        }
+
+
     }
 
     private void CalculateMovement(){
         currentNodePos = currentNode.GetNodePosition(this.transform.position.y);
 
         if(Vector3.Distance(this.transform.position, currentNodePos) < 0.1f){
+            if(CheckTrafficLight()){
+                return;
+            }
+
             // Verifica si es intersección
             VerifyIntersection();
             //Si si es intersección 
@@ -82,6 +96,38 @@ public class CarAgent : MonoBehaviour
 
         }
     }
+
+    private bool CheckTrafficLight(){
+        if(currentNode.hasTrafficLight){
+            if(currentNode.semaforoController.state == SemaforoController.SemaforoState.red){
+                print(agentName + " is waiting for the traffic light");
+                StopAgent();
+                return true;
+
+            }else if(currentNode.semaforoController.state == SemaforoController.SemaforoState.green){
+                currentState = CarState.driving;
+            }
+        }
+        return false;
+    }
+
+
+    //On trigger enter
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "CarAgent")
+        {
+            print("CarAgent " + agentName + " collided with " + other.gameObject.GetComponent<CarAgent>().agentName);
+            StopAgent();
+        }
+    }
+
+
+    // void OnColi(Collider other)
+    // {
+    //     print("Car: "+ agentName +" Collision with " + other.GetComponent<CarAgent>().agentName);
+    // }
+
 
 
 }

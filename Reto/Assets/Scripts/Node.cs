@@ -9,6 +9,10 @@ public class Node : MonoBehaviour
     public bool isIntersection = false;
     public string intersectionType = "";
 
+    public bool hasTrafficLight = false;
+    public SemaforoController semaforoController;
+
+
     // Start is called before the first frame update
     void Start()
     {

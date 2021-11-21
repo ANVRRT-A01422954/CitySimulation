@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 4970601394456392879}
   - component: {fileID: 384860793324827669}
   - component: {fileID: 2775337754313352584}
-  - component: {fileID: 1053102326376671846}
   m_Layer: 0
   m_Name: Parrila1
   m_TagString: Untagged
@@ -116,19 +115,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1053102326376671846
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599300552915466556}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &843297056939551762
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +126,6 @@ GameObject:
   - component: {fileID: 1495818716747060476}
   - component: {fileID: 630744829364634914}
   - component: {fileID: 2256104340334107856}
-  - component: {fileID: 4306190035575387082}
   m_Layer: 0
   m_Name: LlantaDI
   m_TagString: Untagged
@@ -211,20 +196,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4306190035575387082
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843297056939551762}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &2750822078757086480
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +207,6 @@ GameObject:
   - component: {fileID: 7025764395090136432}
   - component: {fileID: 365429064707162331}
   - component: {fileID: 4406640145871002052}
-  - component: {fileID: 1479122793376977803}
   m_Layer: 0
   m_Name: Carroceria
   m_TagString: Untagged
@@ -307,19 +277,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1479122793376977803
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2750822078757086480}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2864161420673459938
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +288,6 @@ GameObject:
   - component: {fileID: 2436375085264383582}
   - component: {fileID: 1401418244886416205}
   - component: {fileID: 2330204436136886172}
-  - component: {fileID: 3512462713593400771}
   m_Layer: 0
   m_Name: LlantaTI
   m_TagString: Untagged
@@ -402,20 +358,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3512462713593400771
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2864161420673459938}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &3045303523564148927
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +403,6 @@ GameObject:
   - component: {fileID: 5758915320431712444}
   - component: {fileID: 2951769012844720527}
   - component: {fileID: 4382194587442308892}
-  - component: {fileID: 8581957142054845160}
   m_Layer: 0
   m_Name: Parabrisas
   m_TagString: Untagged
@@ -532,19 +473,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8581957142054845160
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4263742799778603014}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4772922552138715567
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +484,6 @@ GameObject:
   - component: {fileID: 622368079310426512}
   - component: {fileID: 6508061503708710200}
   - component: {fileID: 5189103923765355911}
-  - component: {fileID: 6783610466002857278}
   m_Layer: 0
   m_Name: Parrila2
   m_TagString: Untagged
@@ -627,19 +554,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6783610466002857278
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4772922552138715567}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5202216397925555146
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +565,6 @@ GameObject:
   - component: {fileID: 8445545815474877475}
   - component: {fileID: 9132909348877469308}
   - component: {fileID: 8075961963608554771}
-  - component: {fileID: 1595868539747848485}
   m_Layer: 0
   m_Name: LlantaDD
   m_TagString: Untagged
@@ -722,20 +635,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1595868539747848485
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5202216397925555146}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &5466402348137294232
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +646,6 @@ GameObject:
   - component: {fileID: 5728653890368209295}
   - component: {fileID: 4576351153407016993}
   - component: {fileID: 8046052992195965970}
-  - component: {fileID: 2871178064124932782}
   m_Layer: 0
   m_Name: Parrila3
   m_TagString: Untagged
@@ -818,19 +716,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2871178064124932782
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5466402348137294232}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5976599556134126373
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +760,6 @@ GameObject:
   - component: {fileID: 6810853154920065245}
   - component: {fileID: 8834065345731828725}
   - component: {fileID: 8109366824164676069}
-  - component: {fileID: 8517462308282865495}
   m_Layer: 0
   m_Name: LlantaTD
   m_TagString: Untagged
@@ -946,17 +830,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8517462308282865495
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9127686178870171886}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

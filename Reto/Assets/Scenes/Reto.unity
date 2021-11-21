@@ -144,6 +144,8 @@ MonoBehaviour:
   - {fileID: 1771127836}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &17876637
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +209,8 @@ MonoBehaviour:
   - {fileID: 2007918405}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &36799820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499602761482, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -228,6 +232,40 @@ MonoBehaviour:
   - {fileID: 498737376}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!1 &43342990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5679706468504269369, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 2938972743098730559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &43342991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 2938972743098730559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &43342992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43342990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce5c3ef7dbd80740980a0f53faa9b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lights:
+  - {fileID: 458881181}
+  - {fileID: 456833397}
+  - {fileID: 496944646}
+  yellowMaterial: {fileID: 2100000, guid: 79dbbf8e30089d94f8597be6ffa96cd4, type: 2}
+  redMaterial: {fileID: 2100000, guid: ce8006d969ce74940ba32ce95e3b1a6b, type: 2}
+  greenMaterial: {fileID: 2100000, guid: 9be889efcbc589d41b2dc506d3fe71f5, type: 2}
+  grayMaterial: {fileID: 2100000, guid: 3d5483b074ddf0745bb75ecdae09c0e4, type: 2}
+  type: 1
+  state: 0
 --- !u!1 &65419172
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +313,8 @@ MonoBehaviour:
   - {fileID: 1559584811}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1001 &98762837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,6 +325,10 @@ PrefabInstance:
     - target: {fileID: 5976599556134126373, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_Name
       value: AgentB
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976599556134126373, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
+      propertyPath: m_TagString
+      value: CarAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_RootOrder
@@ -357,6 +401,35 @@ MonoBehaviour:
   currentNode: {fileID: 1559783381}
   speed: 15
   agentName: AgentR
+--- !u!65 &110125554
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110125551}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.56}
+  m_Center: {x: 0, y: 0.1, z: 0.13}
+--- !u!54 &110125555
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110125551}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &145351909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500159704947, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -378,6 +451,13 @@ MonoBehaviour:
   - {fileID: 1305494771}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!4 &163006184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7445979739446035570, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 645580902}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &218290235 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499591445635, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -399,6 +479,8 @@ MonoBehaviour:
   - {fileID: 643681762}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &222985671 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499653394257, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -420,6 +502,8 @@ MonoBehaviour:
   - {fileID: 235933277}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &223533274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499203348414, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -441,6 +525,8 @@ MonoBehaviour:
   - {fileID: 2050748419}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &223592212 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499494736992, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -462,6 +548,8 @@ MonoBehaviour:
   - {fileID: 1285885653}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &235933275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499400282398, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -483,6 +571,8 @@ MonoBehaviour:
   - {fileID: 974051435}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &238310836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500263733144, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -504,6 +594,8 @@ MonoBehaviour:
   - {fileID: 222985673}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &241255247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499496159653, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -526,6 +618,8 @@ MonoBehaviour:
   - {fileID: 238310838}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &251108072 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3677894268562156474, guid: e90c5cdbd9de0c741af0098f6923ef2f, type: 3}
@@ -551,6 +645,35 @@ MonoBehaviour:
   currentNode: {fileID: 1230357337}
   speed: 15
   agentName: AgentG
+--- !u!65 &251108075
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251108072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.56}
+  m_Center: {x: 0, y: 0.1, z: 0.13}
+--- !u!54 &251108076
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251108072}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &269744303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -606,6 +729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AgentR
       objectReference: {fileID: 0}
+    - target: {fileID: 3865902161219755837, guid: 61e0b6d08d2cb114aaf99bb0a331c95f, type: 3}
+      propertyPath: m_TagString
+      value: CarAgent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61e0b6d08d2cb114aaf99bb0a331c95f, type: 3}
 --- !u!1 &278844605 stripped
@@ -629,6 +756,8 @@ MonoBehaviour:
   - {fileID: 1875621155}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &294596084 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896498677872667, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -650,6 +779,8 @@ MonoBehaviour:
   - {fileID: 1230476941}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &319822607
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +814,8 @@ MonoBehaviour:
   - {fileID: 1433665380}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &319822609
 Transform:
   m_ObjectHideFlags: 0
@@ -718,6 +851,8 @@ MonoBehaviour:
   - {fileID: 454683117}
   isIntersection: 1
   intersectionType: Start
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &355792928
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +886,8 @@ MonoBehaviour:
   - {fileID: 319822608}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &355792930
 Transform:
   m_ObjectHideFlags: 0
@@ -787,6 +924,8 @@ MonoBehaviour:
   - {fileID: 1091423763}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &390824061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5976599556134126373, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
@@ -812,6 +951,35 @@ MonoBehaviour:
   currentNode: {fileID: 2016967367}
   speed: 15
   agentName: AgentB
+--- !u!65 &390824064
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390824061}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.56}
+  m_Center: {x: 0, y: 0.1, z: 0.13}
+--- !u!54 &390824065
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390824061}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &404900179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -890,6 +1058,8 @@ MonoBehaviour:
   - {fileID: 1856950933}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &454683115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500387236588, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -911,6 +1081,18 @@ MonoBehaviour:
   - {fileID: 1240989479}
   isIntersection: 1
   intersectionType: End
+  hasTrafficLight: 0
+  semaforoController: {fileID: 859834949}
+--- !u!4 &456833397 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7445979739003019047, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 2938972743098730559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &458881181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7445979738644016935, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 2938972743098730559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &478473986 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500012606824, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -933,6 +1115,8 @@ MonoBehaviour:
   - {fileID: 1961557102}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &479199804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499481224892, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -954,6 +1138,8 @@ MonoBehaviour:
   - {fileID: 1121145849}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &487072281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896498805424391, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -975,6 +1161,13 @@ MonoBehaviour:
   - {fileID: 479199806}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!4 &496944646 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7445979739446035570, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 2938972743098730559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &498737374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499052210838, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -996,6 +1189,8 @@ MonoBehaviour:
   - {fileID: 718001020}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &568069068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1223,7 @@ Transform:
   - {fileID: 2016623678}
   - {fileID: 251108073}
   - {fileID: 1127822013}
+  - {fileID: 945749982}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1064,6 +1260,8 @@ MonoBehaviour:
   - {fileID: 1062586476}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &568104465
 Transform:
   m_ObjectHideFlags: 0
@@ -1100,6 +1298,8 @@ MonoBehaviour:
   - {fileID: 326766833}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &603879491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500484061628, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1121,6 +1321,8 @@ MonoBehaviour:
   - {fileID: 1222487077}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &631912311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499919688723, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1142,6 +1344,8 @@ MonoBehaviour:
   - {fileID: 1965679181}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &643681760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499516092136, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1163,6 +1367,69 @@ MonoBehaviour:
   - {fileID: 1646119136}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!1001 &645580902
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 817090490}
+    m_Modifications:
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.796639
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.2709212
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.5409522
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938972741647427876, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679706468504269369, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_Name
+      value: Semaforo 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
 --- !u!1 &688669215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,6 +1484,8 @@ MonoBehaviour:
   - {fileID: 603879493}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &710394968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,6 +1533,8 @@ MonoBehaviour:
   - {fileID: 1558849108}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &718001018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499694214121, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1285,6 +1556,69 @@ MonoBehaviour:
   - {fileID: 1559783381}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!1001 &743744576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 568069069}
+    m_Modifications:
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 42.774113
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 23.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165981720027679382, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_Name
+      value: AgentV2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165981720027679382, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_TagString
+      value: CarAgent
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
 --- !u!1 &759705915 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499791087465, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1306,6 +1640,72 @@ MonoBehaviour:
   - {fileID: 706203338}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!1 &817090489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 817090490}
+  m_Layer: 0
+  m_Name: Semaforos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &817090490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817090489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1166391, y: 7.774396, z: 1.9309521}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 43342991}
+  - {fileID: 859834948}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &859834947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5679706468504269369, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 645580902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &859834948 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 645580902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &859834949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859834947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce5c3ef7dbd80740980a0f53faa9b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lights:
+  - {fileID: 1348235631}
+  - {fileID: 1803446001}
+  - {fileID: 163006184}
+  yellowMaterial: {fileID: 2100000, guid: 79dbbf8e30089d94f8597be6ffa96cd4, type: 2}
+  redMaterial: {fileID: 2100000, guid: ce8006d969ce74940ba32ce95e3b1a6b, type: 2}
+  greenMaterial: {fileID: 2100000, guid: 9be889efcbc589d41b2dc506d3fe71f5, type: 2}
+  grayMaterial: {fileID: 2100000, guid: 3d5483b074ddf0745bb75ecdae09c0e4, type: 2}
+  type: 0
+  state: 0
 --- !u!1 &865572563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499838156166, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1327,6 +1727,8 @@ MonoBehaviour:
   - {fileID: 1313862763}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &915007931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1760,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &945749981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3165981720027679382, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+  m_PrefabInstance: {fileID: 743744576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945749982 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 948512061622289809, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+  m_PrefabInstance: {fileID: 743744576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &945749983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945749981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645b1aea7f6238041a79a5016b9ea6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentNode: {fileID: 454683117}
+  speed: 15
+  agentName: AgentV2
+--- !u!65 &945749984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945749981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.56}
+  m_Center: {x: 0, y: 0.1, z: 0.13}
+--- !u!54 &945749985
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945749981}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &974051433 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499505118428, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1379,6 +1835,8 @@ MonoBehaviour:
   - {fileID: 1210722308}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &977409397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,6 +1870,8 @@ MonoBehaviour:
   - {fileID: 568104464}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &977409399
 Transform:
   m_ObjectHideFlags: 0
@@ -1447,6 +1907,8 @@ MonoBehaviour:
   - {fileID: 2051968054}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1019332724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +2038,8 @@ MonoBehaviour:
   - {fileID: 2139187826}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &1062586477
 Transform:
   m_ObjectHideFlags: 0
@@ -1611,6 +2075,8 @@ MonoBehaviour:
   - {fileID: 2112386836}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1081595357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499308361678, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1632,6 +2098,8 @@ MonoBehaviour:
   - {fileID: 759705917}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1091423761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +2147,8 @@ MonoBehaviour:
   - {fileID: 1233515213}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1105957077 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500664875676, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1700,6 +2170,8 @@ MonoBehaviour:
   - {fileID: 1903400052}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1121145847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499643192732, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1721,6 +2193,8 @@ MonoBehaviour:
   - {fileID: 1679198188}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1127822012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3165981720027679382, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
@@ -1746,6 +2220,35 @@ MonoBehaviour:
   currentNode: {fileID: 643681762}
   speed: 15
   agentName: AgentV
+--- !u!65 &1127822015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127822012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.56}
+  m_Center: {x: 0, y: 0.1, z: 0.13}
+--- !u!54 &1127822016
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127822012}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1139577917 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500365562155, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1767,6 +2270,8 @@ MonoBehaviour:
   - {fileID: 145351911}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1144100433 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500498796258, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -1788,6 +2293,8 @@ MonoBehaviour:
   - {fileID: 865572565}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1194972676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,11 +2382,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194972676}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 16.52, y: 42.38, z: -28.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1197759257
 GameObject:
@@ -1985,6 +2492,8 @@ MonoBehaviour:
   - {fileID: 1559584811}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1222487075 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499016044471, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2006,6 +2515,8 @@ MonoBehaviour:
   - {fileID: 1718456140}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1230357335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500197629054, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2027,6 +2538,8 @@ MonoBehaviour:
   - {fileID: 1916126702}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1230476939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499845753668, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2048,6 +2561,8 @@ MonoBehaviour:
   - {fileID: 2135178462}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1233515212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,6 +2597,8 @@ MonoBehaviour:
   - {fileID: 1651516733}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &1233515214
 Transform:
   m_ObjectHideFlags: 0
@@ -2117,6 +2634,8 @@ MonoBehaviour:
   - {fileID: 1948370538}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1254229313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2670,8 @@ MonoBehaviour:
   - {fileID: 2051968054}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &1254229315
 Transform:
   m_ObjectHideFlags: 0
@@ -2218,6 +2739,8 @@ MonoBehaviour:
   - {fileID: 1230357337}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &1296885368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
@@ -2244,6 +2767,8 @@ MonoBehaviour:
   - {fileID: 22181603}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1313862761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500214529185, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2265,6 +2790,8 @@ MonoBehaviour:
   - {fileID: 1360316248}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1339233878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,6 +2839,8 @@ MonoBehaviour:
   - {fileID: 1559783381}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1344274948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500793581252, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2333,6 +2862,13 @@ MonoBehaviour:
   - {fileID: 361333548}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!4 &1348235631 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7445979738644016935, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 645580902}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1360316246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499579586313, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2354,6 +2890,8 @@ MonoBehaviour:
   - {fileID: 479199806}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1389195595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,6 +2959,8 @@ MonoBehaviour:
   - {fileID: 1254229314}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &1433665381
 Transform:
   m_ObjectHideFlags: 0
@@ -2468,6 +3008,8 @@ MonoBehaviour:
   - {fileID: 355792929}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &1479020222
 Transform:
   m_ObjectHideFlags: 0
@@ -2537,6 +3079,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AgentV
       objectReference: {fileID: 0}
+    - target: {fileID: 3165981720027679382, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
+      propertyPath: m_TagString
+      value: CarAgent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26c2faa17da41974fae2b14072bf94b1, type: 3}
 --- !u!1 &1505611368 stripped
@@ -2560,6 +3106,8 @@ MonoBehaviour:
   - {fileID: 430325559}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1510448692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499578612737, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2581,6 +3129,8 @@ MonoBehaviour:
   - {fileID: 1505611370}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1001 &1523045280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2602,7 +3152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6990896500250657031, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6990896500250657031, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2694,6 +3244,8 @@ MonoBehaviour:
   - {fileID: 1233515213}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1559584809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499127354581, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2715,6 +3267,8 @@ MonoBehaviour:
   - {fileID: 581822243}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1559783379 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499105599677, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2736,6 +3290,8 @@ MonoBehaviour:
   - {fileID: 15361911}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1582581386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,6 +3325,8 @@ MonoBehaviour:
   - {fileID: 977409398}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &1582581388
 Transform:
   m_ObjectHideFlags: 0
@@ -2804,6 +3362,8 @@ MonoBehaviour:
   - {fileID: 487072282}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1599398829 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499081531514, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2825,6 +3385,8 @@ MonoBehaviour:
   - {fileID: 36799822}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1604042822 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500697075269, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2846,6 +3408,8 @@ MonoBehaviour:
   - {fileID: 1105957079}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1627881450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499653151942, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2867,6 +3431,8 @@ MonoBehaviour:
   - {fileID: 1139577919}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1646119134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499674297645, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2888,6 +3454,8 @@ MonoBehaviour:
   - {fileID: 1599398831}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1651516731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,6 +3503,8 @@ MonoBehaviour:
   - {fileID: 65419174}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1653231772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896498819393787, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2957,6 +3527,8 @@ MonoBehaviour:
   - {fileID: 1627881452}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1679198186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499518391960, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -2978,11 +3550,37 @@ MonoBehaviour:
   - {fileID: 223592214}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!1 &1694289891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6990896500250657030, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
+  m_PrefabInstance: {fileID: 1523045280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1694289892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6990896500250657031, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
   m_PrefabInstance: {fileID: 1523045280}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1694289893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694289891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52699263ed2b8e94e8e9fe57dc1abb4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableAgents:
+  - {fileID: 390824061}
+  - {fileID: 110125551}
+  - {fileID: 2016623677}
+  - {fileID: 251108072}
+  - {fileID: 1127822012}
+  - {fileID: 945749981}
 --- !u!1 &1698273636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499102845863, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3004,6 +3602,8 @@ MonoBehaviour:
   - {fileID: 1862135596}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1712332977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499337735035, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3025,6 +3625,8 @@ MonoBehaviour:
   - {fileID: 294596086}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1718456138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,6 +3674,8 @@ MonoBehaviour:
   - {fileID: 1479020221}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1771127834 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896498681129426, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3093,6 +3697,8 @@ MonoBehaviour:
   - {fileID: 1785281543}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1777431415 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500251999285, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3114,6 +3720,8 @@ MonoBehaviour:
   - {fileID: 1586148441}
   isIntersection: 1
   intersectionType: End
+  hasTrafficLight: 1
+  semaforoController: {fileID: 43342992}
 --- !u!1 &1785281541 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499917501094, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3135,6 +3743,13 @@ MonoBehaviour:
   - {fileID: 1007454548}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!4 &1803446001 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7445979739003019047, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+  m_PrefabInstance: {fileID: 645580902}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1856950931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896498917587201, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3156,6 +3771,8 @@ MonoBehaviour:
   - {fileID: 241255249}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1862135594 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499515826314, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3177,6 +3794,8 @@ MonoBehaviour:
   - {fileID: 278844607}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1875621153 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499222649345, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3198,6 +3817,8 @@ MonoBehaviour:
   - {fileID: 478473988}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1001 &1896065544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3253,6 +3874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AgentG
       objectReference: {fileID: 0}
+    - target: {fileID: 3677894268562156474, guid: e90c5cdbd9de0c741af0098f6923ef2f, type: 3}
+      propertyPath: m_TagString
+      value: CarAgent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90c5cdbd9de0c741af0098f6923ef2f, type: 3}
 --- !u!1 &1903400050 stripped
@@ -3276,6 +3901,8 @@ MonoBehaviour:
   - {fileID: 1066395759}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1916126700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500688154732, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3298,6 +3925,8 @@ MonoBehaviour:
   - {fileID: 710394970}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1917618900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500007993657, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3319,6 +3948,8 @@ MonoBehaviour:
   - {fileID: 631912313}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1933300615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499058772917, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3340,6 +3971,8 @@ MonoBehaviour:
   - {fileID: 1698273638}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1944241772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3373,6 +4006,8 @@ MonoBehaviour:
   - {fileID: 1582581387}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &1944241774
 Transform:
   m_ObjectHideFlags: 0
@@ -3408,6 +4043,8 @@ MonoBehaviour:
   - {fileID: 1230357337}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1961557100 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896498882261481, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3429,6 +4066,8 @@ MonoBehaviour:
   - {fileID: 1510448694}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &1965679179 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896498872398143, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3450,6 +4089,8 @@ MonoBehaviour:
   - {fileID: 1712332979}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &2007918403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499663848304, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3471,6 +4112,8 @@ MonoBehaviour:
   - {fileID: 2139187826}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1001 &2009602309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3481,6 +4124,10 @@ PrefabInstance:
     - target: {fileID: 5976599556134126373, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_Name
       value: AgentB2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976599556134126373, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
+      propertyPath: m_TagString
+      value: CarAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_RootOrder
@@ -3553,6 +4200,35 @@ MonoBehaviour:
   currentNode: {fileID: 1651516733}
   speed: 15
   agentName: AgentB2
+--- !u!65 &2016623680
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016623677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.56}
+  m_Center: {x: 0, y: 0.1, z: 0.13}
+--- !u!54 &2016623681
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016623677}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2016967366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896499896702374, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3574,6 +4250,8 @@ MonoBehaviour:
   - {fileID: 1777431417}
   isIntersection: 1
   intersectionType: Start
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &2035864864 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500199084610, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3595,6 +4273,8 @@ MonoBehaviour:
   - {fileID: 1144100435}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1001 &2041455468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3612,43 +4292,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5853233
+      value: 1.542
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.0657873
+      value: -5.237
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.7566566
+      value: 3.768
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.018906834
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.9848078
+      value: 0.98055327
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.14865978
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.17364816
+      value: -0.12672038
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
+      value: 175.713
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 20
+      value: 14.097
       objectReference: {fileID: 0}
     - target: {fileID: 8374228595482758178, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -16.710999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 912feb1636b80054bb50e8718e6e5f3e, type: 3}
@@ -3673,6 +4353,8 @@ MonoBehaviour:
   - {fileID: 1344274950}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &2051968053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3706,6 +4388,8 @@ MonoBehaviour:
   - {fileID: 1944241773}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!4 &2051968055
 Transform:
   m_ObjectHideFlags: 0
@@ -3837,6 +4521,8 @@ MonoBehaviour:
   - {fileID: 1653231774}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &2135178460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500190544068, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3858,6 +4544,8 @@ MonoBehaviour:
   - {fileID: 218290237}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
 --- !u!1 &2139187824 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6990896500343932032, guid: 1c085edc677441546b58bb2b29e63f02, type: 3}
@@ -3879,3 +4567,66 @@ MonoBehaviour:
   - {fileID: 223533276}
   isIntersection: 0
   intersectionType: 
+  hasTrafficLight: 0
+  semaforoController: {fileID: 0}
+--- !u!1001 &2938972743098730559
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 817090490}
+    m_Modifications:
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.894558
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.3409204
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.9194508
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384891677388774166, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938972741647427876, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679706468504269369, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
+      propertyPath: m_Name
+      value: Semaforo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44f34867cd7aa6a429e755647a6f2e4d, type: 3}
